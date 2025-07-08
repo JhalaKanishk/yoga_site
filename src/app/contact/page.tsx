@@ -106,7 +106,7 @@ const handleSubmit = async (e: React.FormEvent) => {
             Get in Touch
           </h1>
           <p className="text-xl text-green-600 max-w-2xl mx-auto">
-            Ready to begin your yoga journey? We'd love to hear from you. Reach
+            Ready to begin your yoga journey? We will love to hear from you. Reach
             out with any questions or to schedule your first class.
           </p>
         </div>
@@ -169,7 +169,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                       required
                       rows={5}
                       className="mt-1 border-green-200 focus:border-green-500"
-                      placeholder="Tell us about your yoga experience and what you're looking for..."
+                      placeholder="Tell us about your yoga experience and what you are looking for..."
                     />
                   </div>
 

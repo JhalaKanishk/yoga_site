@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Heart, Leaf, Sun, Users } from "lucide-react"
-import Image from "next/image"
 import Link from "next/link"
 import TestimonialsCarousel from "@/components/testimonials-carousel"
 
