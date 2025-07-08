@@ -1,69 +1,10 @@
-"use client";
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { Heart, Leaf, Sun, Users } from "lucide-react"
+import Link from "next/link"
+import TestimonialsCarousel from "@/components/testimonials-carousel"
 
-import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { Leaf } from "lucide-react";
-import Link from "next/link";
-
-const galleryImages = [
-  {
-    id: 1,
-    src: "images/T1.jpg",
-    alt: "Morning yoga session in our main studio",
-    title: "Morning Practice",
-  },
-  {
-    id: 2,
-    src: "images/T2.jpg",
-    alt: "Meditation corner with soft lighting",
-    title: "Meditation Space",
-  },
-  {
-    id: 3,
-    src: "images/T3.jpeg",
-    alt: "Group yoga class in session",
-    title: "Group Classes",
-  },
-  {
-    id: 4,
-    src: "images/CL3.png",
-    alt: "Peaceful outdoor yoga deck",
-    title: "Outdoor Deck",
-  },
-  {
-    id: 5,
-    src: "images/cleint.jpeg",
-    alt: "Yoga props and equipment storage",
-    title: "Studio Equipment",
-  },
-  {
-    id: 6,
-    src: "images/cl1.jpeg",
-    alt: "Relaxation area with comfortable cushions",
-    title: "Relaxation Area",
-  },
-  {
-    id: 7,
-    src: "images/cleint2.png",
-    alt: "Sunset yoga practice",
-    title: "Evening Sessions",
-  },
-  {
-    id: 8,
-    src: "/placeholder.svg?height=400&width=600",
-    alt: "Private session room",
-    title: "Private Sessions",
-  },
-  {
-    id: 9,
-    src: "/placeholder.svg?height=400&width=600",
-    alt: "Workshop and training space",
-    title: "Workshops",
-  },
-];
-
-export default function GalleryPage() {
-
+export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
       {/* Navigation */}
@@ -72,33 +13,19 @@ export default function GalleryPage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <Leaf className="h-8 w-8 text-green-600" />
-              <span className="text-2xl font-bold text-green-800">
-                Serenity Yoga
-              </span>
+              <span className="text-2xl font-bold text-green-800">Serenity Yoga</span>
             </div>
             <div className="hidden md:flex space-x-8">
-              <Link
-                href="/"
-                className="text-green-700 hover:text-green-600 font-medium"
-              >
+              <Link href="/" className="text-green-700 hover:text-green-600 font-medium">
                 Home
               </Link>
-              <Link
-                href="/about"
-                className="text-green-700 hover:text-green-600 font-medium"
-              >
+              <Link href="/about" className="text-green-700 hover:text-green-600 font-medium">
                 About
               </Link>
-              <Link
-                href="/gallery"
-                className="text-green-700 hover:text-green-600 font-medium"
-              >
+              <Link href="/gallery" className="text-green-700 hover:text-green-600 font-medium">
                 Gallery
               </Link>
-              <Link
-                href="/contact"
-                className="text-green-700 hover:text-green-600 font-medium"
-              >
+              <Link href="/contact" className="text-green-700 hover:text-green-600 font-medium">
                 Contact
               </Link>
             </div>
@@ -106,84 +33,26 @@ export default function GalleryPage() {
         </div>
       </nav>
 
-      {/* Header */}
-      <section className="py-16 px-4">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4">
         <div className="container mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-green-800 mb-6">
-            Studio Gallery
-          </h1>
-          <p className="text-xl text-green-600 max-w-2xl mx-auto">
-            Take a visual journey through our beautiful studio spaces and see
-            our vibrant yoga community in action.
-          </p>
-        </div>
-      </section>
-
-      {/* Gallery Grid */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {galleryImages.map((image) => (
-              <Dialog key={image.id}>
-                <DialogTrigger asChild>
-                  <div className="group cursor-pointer">
-                    <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                      <img
-                        src={image.src || "/placeholder.svg"}
-                        alt={image.alt}
-                        width={600}
-                        height={400}
-                        className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-                      <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
-                        <h3 className="text-white font-semibold text-lg">
-                          {image.title}
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                </DialogTrigger>
-                <DialogContent className="max-w-4xl">
-                  <div className="relative">
-                    <img
-                      src={image.src || "/placeholder.svg"}
-                      alt={image.alt}
-                      width={800}
-                      height={600}
-                      className="w-full h-auto rounded-lg"
-                    />
-                    <div className="mt-4">
-                      <h3 className="text-xl font-semibold text-green-800 mb-2">
-                        {image.title}
-                      </h3>
-                      <p className="text-green-600">{image.alt}</p>
-                    </div>
-                  </div>
-                </DialogContent>
-              </Dialog>
-            ))}
+          <div className="relative mb-8">
+            <img
+              src="images/Main3.jpeg"
+              alt="Peaceful yoga session at sunrise"
+              width={700}
+              height={500}
+              className="mx-auto rounded-2xl shadow-2xl"
+            />
           </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="py-16 px-4 bg-green-50">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold text-green-800 mb-6">
-            Ready to Experience Our Studio?
-          </h2>
+          <h1 className="text-5xl md:text-6xl font-bold text-green-800 mb-6">Find Your Inner Peace</h1>
           <p className="text-xl text-green-600 mb-8 max-w-2xl mx-auto">
-            Come visit us and see these beautiful spaces in person. Book your
-            first class today and become part of our yoga community.
+            Discover the transformative power of yoga in our serene studio. Connect with your body, mind, and spirit
+            through ancient practices adapted for modern Lifes.
           </p>
           <div className="space-x-4">
-            <Button
-              asChild
-              size="lg"
-              className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full"
-            >
-              <Link href="/contact">Book a Class</Link>
+            <Button asChild size="lg" className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-full">
+              <Link href="/contact">Join a Session</Link>
             </Button>
             <Button
               asChild
@@ -197,6 +66,73 @@ export default function GalleryPage() {
         </div>
       </section>
 
+      {/* Quick Links Section */}
+      <section className="py-16 px-4 bg-white">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-center text-green-800 mb-12">Explore Our Offerings</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="border-green-200 hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 text-center">
+                <Heart className="h-12 w-12 text-green-600 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-green-800 mb-2">About Us</h3>
+                <p className="text-green-600 mb-4">
+                  Learn about our philosophy, experienced instructors, and commitment to your wellness journey.
+                </p>
+                <Button
+                  asChild
+                  variant="outline"
+                  className="border-green-600 text-green-600 hover:bg-green-50 bg-transparent"
+                >
+                  <Link href="/about">Discover More</Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="border-green-200 hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 text-center">
+                <Users className="h-12 w-12 text-green-600 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-green-800 mb-2">Testimonials</h3>
+                <p className="text-green-600 mb-4">
+                  Read inspiring stories from our community members who have transformed their lives through yoga.
+                </p>
+                <Button
+                  asChild
+                  variant="outline"
+                  className="border-green-600 text-green-600 hover:bg-green-50 bg-transparent"
+                >
+                  <Link href="#testimonials">Read Stories</Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="border-green-200 hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 text-center">
+                <Sun className="h-12 w-12 text-green-600 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-green-800 mb-2">Gallery</h3>
+                <p className="text-green-600 mb-4">
+                  Explore our beautiful studio spaces and see our community in action through our photo gallery.
+                </p>
+                <Button
+                  asChild
+                  variant="outline"
+                  className="border-green-600 text-green-600 hover:bg-green-50 bg-transparent"
+                >
+                  <Link href="/gallery">View Gallery</Link>
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section id="testimonials" className="py-16 px-4 bg-green-50">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-center text-green-800 mb-12">What Our Students Say</h2>
+          <TestimonialsCarousel />
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-green-800 text-white py-12 px-4">
         <div className="container mx-auto">
@@ -206,29 +142,18 @@ export default function GalleryPage() {
                 <Leaf className="h-6 w-6" />
                 <span className="text-xl font-bold">Serenity Yoga</span>
               </div>
-              <p className="text-green-200">
-                Your journey to inner peace and physical wellness starts here.
-              </p>
+              <p className="text-green-200">Your journey to inner peace and physical wellness starts here.</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
               <div className="space-y-2">
-                <Link
-                  href="/"
-                  className="block text-green-200 hover:text-white"
-                >
-                  Home
-                </Link>
-                <Link
-                  href="/about"
-                  className="block text-green-200 hover:text-white"
-                >
+                <Link href="/about" className="block text-green-200 hover:text-white">
                   About
                 </Link>
-                <Link
-                  href="/contact"
-                  className="block text-green-200 hover:text-white"
-                >
+                <Link href="/gallery" className="block text-green-200 hover:text-white">
+                  Gallery
+                </Link>
+                <Link href="/contact" className="block text-green-200 hover:text-white">
                   Contact
                 </Link>
               </div>
@@ -249,5 +174,5 @@ export default function GalleryPage() {
         </div>
       </footer>
     </div>
-  );
+  )
 }

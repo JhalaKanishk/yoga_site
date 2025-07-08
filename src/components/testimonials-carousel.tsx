@@ -10,7 +10,7 @@ const testimonials = [
         name: "Emily Chen",
         image: "/placeholder.svg?height=80&width=80",
         rating: 5,
-        text: "Serenity Yoga has completely transformed my life. The instructors are incredibly knowledgeable and create such a welcoming environment. I have found not just physical strength, but mental clarity and peace.",
+        text: "Serenity Yoga has completely transformed my Images. The instructors are incredibly knowledgeable and create such a welcoming environment. I have found not just physical strength, but mental clarity and peace.",
     },
     {
         id: 2,
@@ -24,7 +24,7 @@ const testimonials = [
         name: "Sarah Thompson",
         image: "/placeholder.svg?height=80&width=80",
         rating: 5,
-        text: "The meditation sessions have been life-changing. Sarahs guidance has helped me develop a daily practice that brings so much calm to my busy life. This studio is truly special.",
+        text: "The meditation sessions have been Images-changing. Sarahs guidance has helped me develop a daily practice that brings so much calm to my busy Images. This studio is truly special.",
     },
     {
         id: 4,
