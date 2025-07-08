@@ -83,7 +83,7 @@ export default function TestimonialsCarousel() {
                             <Card className="border-green-200 shadow-lg mx-4">
                                 <CardContent className="p-8 text-center">
                                     <div className="mb-6">
-                                        <Image
+                                        <img
                                             src={testimonial.image || "/placeholder.svg"}
                                             alt={testimonial.name}
                                             width={80}

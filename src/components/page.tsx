@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Leaf } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 
 const galleryImages = [
@@ -147,7 +146,7 @@ export default function GalleryPage() {
                 </DialogTrigger>
                 <DialogContent className="max-w-4xl">
                   <div className="relative">
-                    <Image
+                    <img
                       src={image.src || "/placeholder.svg"}
                       alt={image.alt}
                       width={800}

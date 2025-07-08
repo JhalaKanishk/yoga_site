@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Leaf, NotebookIcon as Lotus, Mountain, Sun, Users } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function AboutPage() {
@@ -104,7 +103,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Image
+              <img
                 src="/placeholder.svg?height=400&width=400"
                 alt="Tejeswani Singh, Lead Yoga Instructor"
                 width={400}
