@@ -38,11 +38,11 @@ export default function HomePage() {
       <section className="relative py-20 px-4">
         <div className="container mx-auto text-center">
           <div className="relative mb-8">
-            <Image
-              src="/placeholder.svg?height=400&width=600"
+            <img
+              src="images/Main3.jpeg"
               alt="Peaceful yoga session at sunrise"
-              width={600}
-              height={400}
+              width={700}
+              height={500}
               className="mx-auto rounded-2xl shadow-2xl"
             />
           </div>
